@@ -24,3 +24,10 @@ def signup(request):
     }
     return render(request,'other/signup.html',context=x)
 
+def homeview(request):
+    x={
+        'tobi':1,
+        'ope':2
+    }
+    return render(request,'other/home.html',context=x)
+
