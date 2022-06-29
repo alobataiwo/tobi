@@ -34,14 +34,9 @@ def thankyou(request):
     return render(request,'other/thankyou.html',context=x)
 
 def homeview(request):
-   if request.method == 'POST':
-      form = Modal(request.POST)
-      if form.is_valid():
-        form.save()
-        return redirect(reverse('other:thankyou'))
-    
-
-      else:
-        form = Modal()
-      return render(request,'other/home.html',context={'form':form})
+    x={
+        'tobi':1,
+        'ope':2
+    }
+    return render(request,'other/home.html',context=x)
 
