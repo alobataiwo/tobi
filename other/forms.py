@@ -5,4 +5,4 @@ from django.forms import ModelForm
 class Modal(ModelForm):
     class Meta:
         model= Modal
-        fields = ['__all__']
+        fields = '__all__'
