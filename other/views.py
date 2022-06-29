@@ -40,3 +40,16 @@ def homeview(request):
     }
     return render(request,'other/home.html',context=x)
 
+
+
+def enrollview(request):
+   if request.method == 'POST':
+      form = Modal(request.POST)
+      if form.is_valid():
+        form.save()
+        return redirect(reverse('other:thankyou'))
+    
+
+      else:
+        form = Modal()
+      return render(request,'other/enroll.html',context={'form':form})
