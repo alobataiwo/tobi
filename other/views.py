@@ -41,7 +41,7 @@ def homeview(request):
         return redirect(reverse('other:thankyou'))
     
 
-    else:
+      else:
         form = Modal()
-    return render(request,'other/home.html',context={'form':form})
+      return render(request,'other/home.html',context={'form':form})
 
