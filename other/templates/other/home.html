@@ -374,17 +374,8 @@
           <p class="lead">Fill out this form and we will get back to you.</p>
           <form method="POST">
              <div class="mb-3">
-                <label for="firstname" class="col-form-label">First name:</label>
-                <input  type="text" class="form-control" id="firstname">
-             </div>
-             <div class="mb-3">
-                <label for="lastname" class="col-form-label">Last name:</label>
-                <input  type="text" class="form-control" id="lastname">
-             </div>
-             <div class="mb-3">
-                <label for="email address" class="col-form-label">Email address:</label>
-                <input  type="email" class="form-control" id="email address" required>
-             </div>
+                {% csrf_token %}
+                {{form}}
              <div class="mb-3">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Submit</button>
