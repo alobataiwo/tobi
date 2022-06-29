@@ -47,7 +47,7 @@ def enrollview(request):
       form = Modal(request.POST)
       if form.is_valid():
         form.save()
-        return redirect(reverse('other:thankyou'))
+        return HttpResponse('thank you')
     
 
       else:
